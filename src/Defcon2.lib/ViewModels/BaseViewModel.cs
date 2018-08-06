@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Defcon2.ViewModels
+namespace Defcon2.lib.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

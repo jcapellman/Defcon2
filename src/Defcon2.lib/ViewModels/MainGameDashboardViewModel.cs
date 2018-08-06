@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Defcon2.ViewModels
+﻿namespace Defcon2.lib.ViewModels
 {
     public class MainGameDashboardViewModel : BaseViewModel
     {
