@@ -94,9 +94,9 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Defcon2\Defcon2.csproj">
-      <Project>{F61C3B76-4F1D-42EE-807D-A08BE61365EC}</Project>
-      <Name>Defcon2</Name>
+    <ProjectReference Include="..\Defcon2.lib\Defcon2.lib.csproj">
+      <Project>{72028f18-f64d-4e11-a0de-30754cbdd36a}</Project>
+      <Name>Defcon2.lib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
