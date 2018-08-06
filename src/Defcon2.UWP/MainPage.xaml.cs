@@ -21,7 +21,7 @@ namespace Defcon2.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new Defcon2.App());
+            LoadApplication(new Defcon2.lib.App());
         }
     }
 }
