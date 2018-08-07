@@ -12,8 +12,8 @@ namespace Defcon2.lib
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
-		}
+		    MainPage = new MasterView();
+        }
 
 		protected override void OnStart ()
 		{
