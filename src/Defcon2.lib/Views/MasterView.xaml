@@ -10,6 +10,7 @@
   <MasterDetailPage.Detail>
     <pages:CustomNavigationPage>
         <x:Arguments>
+            <pages:MainGamePage />
         </x:Arguments>
     </pages:CustomNavigationPage>
   </MasterDetailPage.Detail>

@@ -19,12 +19,10 @@
 // THE SOFTWARE.
 
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Defcon2.lib.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MainGamePage : ContentView
+	public partial class MainGamePage : ContentPage
 	{
 		public MainGamePage ()
 		{

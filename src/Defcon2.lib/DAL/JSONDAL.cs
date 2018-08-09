@@ -24,6 +24,6 @@ namespace Defcon2.lib.DAL
 {
     public class JSONDAL : BaseDAL
     {
-
+        
     }
 }
