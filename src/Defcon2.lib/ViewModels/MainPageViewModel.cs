@@ -18,9 +18,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+using Defcon2.lib.GameObjects;
+
 namespace Defcon2.lib.ViewModels
 {
     public class MainPageViewModel : BaseViewModel
     {
+        private Game _currentGame;
+
+        public Game CurrentGame
+        {
+            get => _currentGame;
+
+            set
+            {
+                _currentGame = value;
+
+                OnPropertyChanged();
+            }
+        }
+
+        public MainPageViewModel()
+        {
+            CurrentGame = new Game
+            {
+                CountryName = "Testlandia"
+            };
+        }
     }
 }
