@@ -4,6 +4,7 @@
              x:Class="Defcon2.lib.App">
 	<Application.Resources>
         <ResourceDictionary>
+            <ResourceDictionary Source="Styles/Global.xaml" />
         </ResourceDictionary>
 	</Application.Resources>
 </Application>
