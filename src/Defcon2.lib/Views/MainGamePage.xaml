@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:Defcon2.lib.ViewModels;assembly=Defcon2.lib"
+             Style="{StaticResource PageStyle}"
              x:Class="Defcon2.lib.Views.MainGamePage">
     <ContentPage.BindingContext>
         <viewModels:MainPageViewModel />
