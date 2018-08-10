@@ -30,7 +30,7 @@ namespace Defcon2.lib
 		{
 			InitializeComponent();
 
-		    MainPage = new MasterView();
+		    MainPage = new MainGamePage();
         }
 	}
 }
