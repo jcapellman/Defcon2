@@ -18,7 +18,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+using System.Windows.Input;
+
 using Defcon2.lib.GameObjects;
+
+using Xamarin.Forms;
 
 namespace Defcon2.lib.ViewModels
 {
@@ -38,12 +42,21 @@ namespace Defcon2.lib.ViewModels
             }
         }
 
+        public ICommand NextTurnCommand { get; private set; }
+
+        private void NextTurn()
+        {
+            CurrentGame.Turn();
+        }
+
         public MainPageViewModel()
         {
             CurrentGame = new Game
             {
                 CountryName = "Testlandia"
             };
+
+            NextTurnCommand = new Command(NextTurn);
         }
     }
 }
