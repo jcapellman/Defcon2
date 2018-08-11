@@ -21,6 +21,7 @@
 
             <Grid Column="0" Grid.Row="0">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
@@ -28,12 +29,20 @@
                 <Grid Column="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
 
                     <Label Grid.Column="0" Text="{Binding CurrentGame.CountryName}" />
+                    
+                    <Label Grid.Column="1" Text="{Binding CurrentGame.CurrentYear}" />
+
+                    <Label Grid.Column="2" Text="{Binding CurrentGame.CurrentMonth}" />
                 </Grid>
 
-                <Button Grid.Column="1" Text="Next Turn" />
+                <Label Grid.Column="1" Text="{Binding CurrentGame.Cash}" />
+
+                <Button Grid.Column="2" Text="Next Turn" Command="{Binding NextTurnCommand}" />
             </Grid>
         </Grid>
     </ContentPage.Content>
