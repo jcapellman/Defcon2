@@ -31,5 +31,16 @@ namespace Defcon2.lib.GameObjects
         public string CountryName { get; set; }
 
         public int Cash { get; set; }
+
+        public void Turn()
+        {
+            if (CurrentMonth == 11)
+            {
+                CurrentMonth = 1;
+                CurrentYear++;
+            }
+            
+            TurnNumber++;
+        }
     }
 }
