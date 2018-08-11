@@ -18,12 +18,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+using System;
+using System.Threading.Tasks;
+
 using Defcon2.lib.DAL.Base;
+using Defcon2.lib.PlatformInterfaces;
+
+using Newtonsoft.Json;
+
+using Xamarin.Forms;
 
 namespace Defcon2.lib.DAL
 {
     public class JSONDAL : BaseDAL
     {
-        
+        public override async Task<T> GetDataAsync<T>(string resourceName)
+        {
+            if (string.IsNullOrEmpty(resourceName))
+            {
+                throw new ArgumentNullException();
+            }
+
+            var textString = await DependencyService.Get<IFile>().ReadTextFileAsync(resourceName);
+
+            return JsonConvert.DeserializeObject<T>(textString);
+        }
     }
 }
