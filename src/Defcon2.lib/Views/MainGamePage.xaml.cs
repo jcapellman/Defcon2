@@ -18,6 +18,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+using Defcon2.lib.ViewModels;
+
 using Xamarin.Forms;
 
 namespace Defcon2.lib.Views
@@ -27,6 +29,8 @@ namespace Defcon2.lib.Views
 		public MainGamePage ()
 		{
 			InitializeComponent ();
+
+		    BindingContext = new MainPageViewModel();
 		}
 	}
 }
