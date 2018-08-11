@@ -18,9 +18,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+using System.Threading.Tasks;
+
 namespace Defcon2.lib.DAL.Base
 {
     public abstract class BaseDAL
     {
+        public abstract Task<T> GetDataAsync<T>(string resourceName);
     }
 }
