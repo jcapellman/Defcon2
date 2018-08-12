@@ -18,6 +18,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+using Defcon2.lib.Common;
+
 namespace Defcon2.lib.GameObjects
 {
     public class Game
@@ -32,15 +34,24 @@ namespace Defcon2.lib.GameObjects
 
         public int Cash { get; set; }
 
-        public void Turn()
+        public Game()
         {
-            if (CurrentMonth == 11)
+            CurrentMonth = 1;
+            CurrentYear = Constants.GAME_STARTING_YEAR;
+            Cash = Constants.GAME_STARTING_CASH;
+        }
+
+        public Game Turn()
+        {
+            if (CurrentMonth == Constants.GAME_MONTHS_IN_YEAR - 1)
             {
                 CurrentMonth = 1;
                 CurrentYear++;
             }
             
             TurnNumber++;
+
+            return this;
         }
     }
 }
