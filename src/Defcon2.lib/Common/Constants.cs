@@ -18,23 +18,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-using Defcon2.lib;
-
-using Foundation;
-
-using UIKit;
-
-namespace Defcon2.iOS
+namespace Defcon2.lib.Common
 {
-    [Register("AppDelegate")]
-    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    public static class Constants
     {
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-        {
-            global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+        public const int GAME_STARTING_YEAR = 1946;
 
-            return base.FinishedLaunching(app, options);
-        }
+        public const int GAME_MONTHS_IN_YEAR = 12;
+
+        public const int GAME_STARTING_CASH = 50;
     }
 }

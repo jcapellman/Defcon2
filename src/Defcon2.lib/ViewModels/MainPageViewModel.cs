@@ -46,7 +46,7 @@ namespace Defcon2.lib.ViewModels
 
         private void NextTurn()
         {
-            CurrentGame.Turn();
+            CurrentGame = CurrentGame.Turn();
         }
 
         public MainPageViewModel()
