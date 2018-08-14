@@ -35,5 +35,14 @@ namespace Defcon2.UWP.PlatformImplementations
 
             return await Windows.Storage.FileIO.ReadTextAsync(file);
         }
+
+        public async Task<bool> WriteTextFileAsync(string resourceName, string dataString)
+        {
+            var file = await _storageFolder.CreateFileAsync(resourceName);
+
+            await Windows.Storage.FileIO.WriteTextAsync(file, dataString);
+
+            return true;
+        }
     }
 }
