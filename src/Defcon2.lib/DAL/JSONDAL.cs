@@ -43,5 +43,21 @@ namespace Defcon2.lib.DAL
 
             return JsonConvert.DeserializeObject<T>(textString);
         }
+
+        public override async Task<bool> SetDataAsync<T>(T data, string resourceName)
+        {
+            if (data == null)
+            {
+                throw new ArgumentNullException(nameof(data));
+            }
+
+            if (string.IsNullOrEmpty(resourceName))
+            {
+                throw new ArgumentNullException(nameof(resourceName));
+            }
+
+            return await DependencyService.Get<IFile>()
+                .WriteTextFileAsync(resourceName, JsonConvert.SerializeObject(data));
+        }
     }
 }
