@@ -25,5 +25,7 @@ namespace Defcon2.lib.PlatformInterfaces
     public interface IFile
     {
         Task<string> ReadTextFileAsync(string resourceName);
+
+        Task<bool> WriteTextFileAsync(string resourceName, string dataString);
     }
 }
