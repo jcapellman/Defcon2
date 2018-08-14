@@ -25,5 +25,7 @@ namespace Defcon2.lib.DAL.Base
     public abstract class BaseDAL
     {
         public abstract Task<T> GetDataAsync<T>(string resourceName);
+
+        public abstract Task<bool> SetDataAsync<T>(T data, string resourceName);
     }
 }
