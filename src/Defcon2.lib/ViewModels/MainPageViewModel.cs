@@ -18,8 +18,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+using System;
 using System.Windows.Input;
-
+using Defcon2.lib.DAL;
 using Defcon2.lib.GameObjects;
 
 using Xamarin.Forms;
@@ -28,6 +29,8 @@ namespace Defcon2.lib.ViewModels
 {
     public class MainPageViewModel : BaseViewModel
     {
+        private JSONDAL _jsonDAL = new JSONDAL();
+
         private Game _currentGame;
 
         public Game CurrentGame
@@ -47,6 +50,13 @@ namespace Defcon2.lib.ViewModels
         private void NextTurn()
         {
             CurrentGame = CurrentGame.Turn();
+        }
+
+        public ICommand SaveCommand { get; private set; }
+
+        private async void SaveGame()
+        {
+            await _jsonDAL.SetDataAsync(CurrentGame, $"{CurrentGame.CountryName}-{CurrentGame.TurnNumber}-{DateTime.Now}");
         }
 
         public MainPageViewModel()
