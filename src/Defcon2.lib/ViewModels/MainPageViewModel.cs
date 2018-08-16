@@ -20,7 +20,7 @@
 
 using System;
 using System.Windows.Input;
-using Defcon2.lib.DAL;
+
 using Defcon2.lib.GameObjects;
 
 using Xamarin.Forms;
@@ -29,8 +29,6 @@ namespace Defcon2.lib.ViewModels
 {
     public class MainPageViewModel : BaseViewModel
     {
-        private JSONDAL _jsonDAL = new JSONDAL();
-
         private Game _currentGame;
 
         public Game CurrentGame
@@ -56,7 +54,7 @@ namespace Defcon2.lib.ViewModels
 
         private async void SaveGame()
         {
-            await _jsonDAL.SetDataAsync(CurrentGame, $"{CurrentGame.CountryName}-{CurrentGame.TurnNumber}-{DateTime.Now}");
+            await _dal.SetDataAsync(CurrentGame, $"{CurrentGame.CountryName}-{CurrentGame.TurnNumber}-{DateTime.Now}");
         }
 
         public MainPageViewModel()

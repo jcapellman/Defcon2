@@ -21,10 +21,14 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
+using Defcon2.lib.DAL;
+
 namespace Defcon2.lib.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        protected JSONDAL _dal = new JSONDAL();
+
         public event PropertyChangedEventHandler PropertyChanged;
         
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
