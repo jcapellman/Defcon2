@@ -24,6 +24,7 @@
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
                 <Grid Column="0">
@@ -43,6 +44,8 @@
                 <Label Grid.Column="1" Text="{Binding CurrentGame.Cash}" />
 
                 <Button Grid.Column="2" Text="Next Turn" Command="{Binding NextTurnCommand}" />
+
+                <Button Grid.Column="3" Text="Save Game" Command="{Binding SaveCommand}" />
             </Grid>
         </Grid>
     </ContentPage.Content>
